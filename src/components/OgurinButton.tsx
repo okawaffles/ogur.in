@@ -4,7 +4,9 @@ import type {MouseEventHandler} from "react";
 export default function OgurinButton({text, type, onClick}: {text: string, type: 'positive' | 'negative' | 'danger', onClick: MouseEventHandler<HTMLButtonElement>}) {
     return(
         <>
-            <button onClick={onClick} className={"ogurinButton " + type}>{text}</button>
+            <button
+                onClick={onClick}
+                className={"ogurinButton " + type}>{text}</button>
         </>
     )
 }

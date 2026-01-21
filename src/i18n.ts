@@ -26,7 +26,10 @@ i18next
                             title: "Here's your link!",
                             copy: "Copy and Close",
                         },
-                        close: "Close"
+                        close: "Close",
+                        info: {
+                            title: "Info"
+                        }
                     },
                     transfer: {
                         headsup: "Heads up!",
@@ -36,6 +39,7 @@ i18next
                         cancel: "Wait, nevermind!",
                         report: "Report abuse",
                         notfound: "Not Found",
+                        back: "Back",
                         modal: {
                             report: "Report this link",
                             reportSub: "Please verify you're human first.",
@@ -51,6 +55,9 @@ i18next
                     error: {
                         badUrl: "Looks like that's a bad URL! Please check it and try again.",
                         turnstileFail: "Turnstile verification failed, please try again."
+                    },
+                    misc: {
+                        affiliation: "Not affiliated with Cygames or Umamusume."
                     }
                 }
             },
@@ -69,16 +76,20 @@ i18next
                             title: "Aquí está tu enlace",
                             copy: "Copiar y Cerrar",
                         },
-                        close: "Cerrar"
+                        close: "Cerrar",
+                        info: {
+                            title: "Información"
+                        }
                     },
                     transfer: {
                         headsup: "Aviso de Reenviar",
                         info: "Este enlace te lleva a",
                         check: "¿Estás seguro de que quieres ir?",
-                        confirm: "¡Sí, vamos!",
+                        confirm: "Sí, ¡vamos!",
                         cancel: "No, ¡no quiero ir!",
                         report: "Reportar abuso",
                         notfound: "Not Found",
+                        back: "Cerrar",
                         modal: {
                             report: "Reportar este enlace",
                             reportSub: "Por favor verifica que eres humano primero.",
@@ -90,6 +101,9 @@ i18next
                         english: '🇺🇸 Inglés (EE.UU.) [English (US)]',
                         spanish: '🇲🇽 Español (MX)',
                         lolcat: '😺 LOLCAT (Kingdom of Cats)'
+                    },
+                    misc: {
+                        affiliation: "No afiliado con Cygames o Umamusume."
                     }
                 }
             },
@@ -107,7 +121,10 @@ i18next
                             title: "HERE IZ UR KITTEN LINK!",
                             copy: "COPY AN CLOZ",
                         },
-                        close: "CLOZ"
+                        close: "CLOZ",
+                        info: {
+                            title: "WAT DIS"
+                        }
                     },
                     transfer: {
                         headsup: "HEDZ UP!",
@@ -117,6 +134,7 @@ i18next
                         cancel: "AHHH, NEVERMINDZ!",
                         report: "DIS IZ BAD LINKS!!!",
                         notfound: "DIS LINK IZ NOT REAL",
+                        back: "GO BACK",
                         modal: {
                             report: "REPORT DIS LINK?",
                             reportSub: "U HAV TO VERIFY U R KITTY",
@@ -132,6 +150,9 @@ i18next
                     error: {
                         badUrl: "DAT LINK IZ NOT GUD!!! PLZ FIX IT AN TRY AGAIN!",
                         turnstileFail: "CULD NOT VERIFY U R KITTY, PLZ TRY AGAIN!"
+                    },
+                    misc: {
+                        affiliation: "DIS PLACE NOT BY CYGAMES OR PART OF UMAMUSUME!"
                     }
                 }
             }

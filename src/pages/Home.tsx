@@ -16,6 +16,7 @@ export default function Home() {
     const {t} = useTranslation();
 
     const [isOpen, setIsOpen] = useState(false);
+    const [infoIsOpen, setInfoIsOpen] = useState(false);
     const [link, setLink] = useState(t('url.placeholder'));
     const [cf_token, setCfToken] = useState('BAD_TOKEN');
 
@@ -66,7 +67,8 @@ export default function Home() {
             <LanguageSelect></LanguageSelect>
 
             <h1 className={"m-4 text-4xl font-bold"}>ogur.in</h1>
-            <h2 className={"mb-4 text-3xl"}>{t('home.instruction')}</h2>
+            <h2 className={"text-3xl"}>{t('home.instruction')}</h2>
+            <p className={"text-white text-[12px] mb-4"}>{t('misc.affiliation')}</p>
 
             <UrlInput id={"urlInput"}/>
             <br/>
@@ -99,6 +101,27 @@ export default function Home() {
                     </div>
                 </div>
             </Dialog>
+
+            <Dialog as={"div"} className={"relative z-10 focus:outline-none"} open={infoIsOpen}
+                    onClose={() => setInfoIsOpen(false)}>
+                <DialogBackdrop className="fixed inset-0 backdrop-blur bg-black bg-opacity-50"/>
+
+                <div className="fixed inset-0 z-10 w-screen overflow-y-auto">
+                    <div className="flex min-h-full items-center justify-center p-4">
+                        <DialogPanel transition
+                                     className={"w-full max-w-md rounded-2xl bg-white/5 p-6 backdrop-blur-2xl duration-300 ease-out data-closed:transform-[scale(95%)] data-closed:opacity-0"}>
+                            <DialogTitle as={"h3"}
+                                         className={"mt-2 text-3xl text-white font-bold"}>{t('modal.info.title')}</DialogTitle>
+                            {/* TODO: Figure out how to get git hashes working? */}
+                            <p className={"mt-2 text-white"}>ogur.in Version: 1.1.0</p>
+                            <OgurinButton text={t('modal.close')} type={"positive"}
+                                          onClick={() => setInfoIsOpen(false)}></OgurinButton>
+                        </DialogPanel>
+                    </div>
+                </div>
+            </Dialog>
+
+            <p className="absolute bottom-2 left-2 text-white underline cursor-pointer z-10" onClick={() => setInfoIsOpen(true)}>{t('modal.info.title')}</p>
 
             <div className="chibi-container">
                 <img className={"chibi"} src={oguri} alt="Oguri Cap"/>

@@ -10,6 +10,12 @@
     transition: background-color .2s ease-in-out;
 }
 
+@media screen and (max-width: 600px) {
+    .ogurinButton {
+        margin: .25rem 20vw;
+    }
+}
+
 .ogurinButton.positive {
     background-color: #2db4ef;
 }

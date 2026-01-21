@@ -79,14 +79,14 @@ export default function Forwarder() {
             </div>
 
             <div className={forwarderVisible ? '' : 'hidden'} id="forwarder">
-                <div className="flex justify-left pl-8 flex-wrap" style={{marginLeft:'20vw'}}>
-                    <h1 className={"text-5xl text-white font-bold mt-12 w-full text-left"}>{t('transfer.headsup')}</h1>
-                    <h2 className={"text-4xl text-white font-semibold mt-4 w-full text-left"}>{t('transfer.info')}</h2>
+                <div className="flex justify-left lg:pl-8 flex-wrap lg:ml-[20vw]">
+                    <h1 className={"text-3xl lg:text-5xl text-white font-bold mt-12 w-full text-center lg:text-left"}>{t('transfer.headsup')}</h1>
+                    <h2 className={"text-2xl lg:text-4xl text-white font-semibold mt-4 w-full text-center lg:text-left"}>{t('transfer.info')}</h2>
                 </div>
 
-                <h3 className={"text-3xl m-16"}>{link}</h3>
+                <h3 className={"text-3xl m-4 lg:m-16"}>{link}</h3>
 
-                <div className={"flex justify-evenly w-1/2"} style={{marginLeft:'25vw'}}>
+                <div className={"flex justify-evenly lg:w-1/2 flex-wrap lg:flex-nowrap lg:ml-[25vw]"}>
                     <OgurinButton text={t('transfer.cancel')} type={'negative'} onClick={() => {navigate('/')}}></OgurinButton>
                     <OgurinButton text={t('transfer.report')} type={'danger'} onClick={() => {setIsOpen(true)}}></OgurinButton>
                     <OgurinButton text={t('transfer.confirm')} type={'positive'} onClick={() => {navigate(link)}}></OgurinButton>
