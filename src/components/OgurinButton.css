@@ -1,0 +1,30 @@
+.ogurinButton {
+    margin: 1rem;
+    padding: .5rem 1rem;
+    font-family: inherit;
+    font-size: 1.25rem;
+    border-radius: .5rem;
+    border: none;
+    color: white;
+    font-weight: 600;
+    transition: background-color .2s ease-in-out;
+}
+
+.ogurinButton.positive {
+    background-color: #2db4ef;
+}
+.ogurinButton.positive:hover {
+    background-color: #2db4ef66;
+}
+.ogurinButton.negative {
+    background-color: #f46a00;
+}
+.ogurinButton.negative:hover {
+    background-color: #f46a0066;
+}
+.ogurinButton.danger {
+    background-color: #f44336;
+}
+.ogurinButton.danger:hover {
+    background-color: #f4433666;
+}
