@@ -5,6 +5,7 @@ import Forwarder from "./pages/Forwarder.tsx";
 function App() {
     return(
         <>
+            <title>ogur.in</title>
             <Routes>
                 <Route path="/" element={<Home/>}/>
                 <Route path="/:id" element={<Forwarder/>}/>

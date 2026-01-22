@@ -40,10 +40,12 @@ i18next
                         report: "Report abuse",
                         notfound: "Not Found",
                         back: "Back",
+                        full_link: "Show full link",
                         modal: {
                             report: "Report this link",
                             reportSub: "Please verify you're human first.",
-                            submit: "Submit Report"
+                            submit: "Submit Report",
+                            full_link: "Full Link",
                         }
                     },
                     language: {
@@ -90,10 +92,12 @@ i18next
                         report: "Reportar abuso",
                         notfound: "Not Found",
                         back: "Cerrar",
+                        full_link: "Mostrar enlace completo",
                         modal: {
                             report: "Reportar este enlace",
                             reportSub: "Por favor verifica que eres humano primero.",
-                            submit: "Enviar Reporte"
+                            submit: "Enviar Reporte",
+                            full_link: "Enlace Completo",
                         }
                     },
                     language: {
@@ -135,10 +139,12 @@ i18next
                         report: "DIS IZ BAD LINKS!!!",
                         notfound: "DIS LINK IZ NOT REAL",
                         back: "GO BACK",
+                        full_link: "SEE DA BIG LINK",
                         modal: {
                             report: "REPORT DIS LINK?",
                             reportSub: "U HAV TO VERIFY U R KITTY",
-                            submit: "REPORT IT"
+                            submit: "REPORT IT",
+                            full_link: "DA BIG LINK",
                         }
                     },
                     language: {

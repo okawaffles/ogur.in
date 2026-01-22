@@ -113,7 +113,7 @@ export default function Home() {
                             <DialogTitle as={"h3"}
                                          className={"mt-2 text-3xl text-white font-bold"}>{t('modal.info.title')}</DialogTitle>
                             {/* TODO: Figure out how to get git hashes working? */}
-                            <p className={"mt-2 text-white"}>ogur.in Version: 1.1.0</p>
+                            <p className={"mt-2 text-white"}>ogur.in Version: 1.2.0</p>
                             <OgurinButton text={t('modal.close')} type={"positive"}
                                           onClick={() => setInfoIsOpen(false)}></OgurinButton>
                         </DialogPanel>

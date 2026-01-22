@@ -25,8 +25,9 @@ export default function Forwarder() {
 
     const [isOpen, setIsOpen] = useState(false);
     const [cf_token, setCfToken] = useState('BAD_TOKEN');
-
     const [isSendingReport, setIsSendingReport] = useState(false);
+
+    const [fullLinkDialogOpen, setFullLinkDialogOpen] = useState(false);
 
     async function sendReport() {
         if (isSendingReport) return;
@@ -84,7 +85,8 @@ export default function Forwarder() {
                     <h2 className={"text-2xl lg:text-4xl text-white font-semibold mt-4 w-full text-center lg:text-left"}>{t('transfer.info')}</h2>
                 </div>
 
-                <h3 className={"text-3xl m-4 lg:m-16"}>{link}</h3>
+                <h3 className={"text-3xl m-2 lg:m-4"}>{link.length < 25 ? link : (link.substring(0, link.indexOf('/', link.indexOf('/') + 2)) + '/...')}</h3>
+                <p className={"text-white mb-4 lg:mb-16 underline cursor-pointer"} onClick={() => setFullLinkDialogOpen(true)}>{t('transfer.full_link')}</p>
 
                 <div className={"flex justify-evenly lg:w-1/2 flex-wrap lg:flex-nowrap lg:ml-[25vw]"}>
                     <OgurinButton text={t('transfer.cancel')} type={'negative'} onClick={() => {navigate('/')}}></OgurinButton>
@@ -114,6 +116,25 @@ export default function Forwarder() {
                                               // setIsOpen(false)
                                               sendReport();
                                           }}></OgurinButton>
+                        </DialogPanel>
+                    </div>
+                </div>
+            </Dialog>
+
+            <Dialog as={"div"} className={"relative z-10 focus:outline-none"} open={fullLinkDialogOpen}
+                    onClose={() => setFullLinkDialogOpen(false)}>
+                <DialogBackdrop className="fixed inset-0 backdrop-blur bg-black bg-opacity-50"/>
+
+                <div className="fixed inset-0 z-10 w-screen overflow-y-auto">
+                    <div className="flex min-h-full items-center justify-center p-4">
+                        <DialogPanel transition
+                                     className={"w-full max-w-md rounded-2xl bg-white/5 p-6 backdrop-blur-2xl duration-300 ease-out data-closed:transform-[scale(95%)] data-closed:opacity-0"}>
+                            <DialogTitle as={"h3"}
+                                         className={"mt-2 text-3xl text-white font-bold"}>{t('transfer.modal.full_link')}</DialogTitle>
+                            <p className={"mt-2 text-white"}>{link}</p>
+
+                            <OgurinButton text={t('modal.close')} type={"negative"}
+                                          onClick={() => setFullLinkDialogOpen(false)}></OgurinButton>
                         </DialogPanel>
                     </div>
                 </div>
